@@ -1,0 +1,40 @@
+version: '3.3'
+
+
+services:
+
+  web:
+    build:
+        dockerfile: ./docker/django-cine.dev.dockerfile
+        context: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/:/app/
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.envs/.django.dev
+    networks:
+    - django-cine-network
+    depends_on:
+    - db
+    restart: on-failure
+  
+  db:
+    image: postgres:13.4-alpine
+    volumes:
+    - db_data:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER=django_cine
+    - POSTGRES_PASSWORD=django_cine
+    - POSTGRES_DB=django_cine_dev
+    networks:
+    - django-cine-network
+    restart: on-failure
+
+networks: 
+    django-cine-network:
+        driver: bridge
+
+volumes:
+  db_data:

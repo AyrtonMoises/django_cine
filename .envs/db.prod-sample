@@ -1,0 +1,3 @@
+POSTGRES_DB=django_cine_prod
+POSTGRES_USER=django_cine
+POSTGRES_PASSWORD=django_cine

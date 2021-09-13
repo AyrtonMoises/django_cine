@@ -1,11 +1,12 @@
+.*/
+db.sqlite3
+.git*
 __pycache__
 media
 *.log
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
-media
 .env 
 .venv 
 env/ 
@@ -17,8 +18,6 @@ venv.bak/
 !.vscode/settings.json 
 !.vscode/tasks.json 
 !.vscode/launch.json 
-!.vscode/extensions.json 
-staticfiles
-.django.dev
-.django.prod
-.db.prod
+!.vscode/extensions.json
+*.yml
+.dockerignore
