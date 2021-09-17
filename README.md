@@ -1,12 +1,12 @@
- Docker com Django, Postgres, Gunicorn e Nginx
+### Docker com Django, Postgres, Gunicorn e Nginx
 
 
 ## Desenvolvimento
 
 Usando o servidor de desenvolvimento do Django.
 
-1. Renomear o arquivo da pasta *.envs*: *.django.dev-sample* para *.django.dev*
-1. Atualize as variáveis de ambiente em *docker-compose.dev.yml* and *.env.dev* files.
+1. Renomear o arquivo da pasta *.envs*: *.django.dev-sample* para *.django.dev*.
+1. Atualize as variáveis de ambiente em *docker-compose.dev.yml* e *.django.dev*.
 1. Contruir as imagens e rodar os contâiners :
 2. 
     ```sh
@@ -19,7 +19,7 @@ Usando o servidor de desenvolvimento do Django.
 
 Usando gunicorn + nginx.
 
-1. Renomear os arquivos da pasta *.envs*: *.django.prod-sample* para *.django.prod* e *.db.prod-sample* para *.db.prod*
+1. Renomear os arquivos da pasta *.envs*: *.django.prod-sample* para *.django.prod* e *.db.prod-sample* para *.db.prod*.
 1. Construir as imagens e rodar os contâiners:
 
     ```sh
